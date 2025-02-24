@@ -1,4 +1,4 @@
-Business Goal: Predict the number of sunspots based on historical data.
+## Business Goal: Predict the number of sunspots based on historical data.
 
 1. Data Preparation: 
 	1.1 Creating the input-output pair by defining the window size.
