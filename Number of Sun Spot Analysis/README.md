@@ -1,11 +1,11 @@
 # Number of Sun Spot Analysis
 
-### Business Goal: Predict the number of sunspots based on historical data.
+### Business Goal: 
+Predict the number of sunspots based on historical data.
 
 ### Data Preparation: 
-
-1.Creating the input-output pair by defining the window size.
-2.Shuffle the window size data. This can help the model to be more general. 
+Creating the input-output pair by defining the window size.
+Shuffle the window size data. This can help the model to be more general. 
 
 ### ML model: Neural model because we want to capture the non-linear and long-term dependency relationship inside the dataset. LSTM, RNN, CNN, DNN. 
 
