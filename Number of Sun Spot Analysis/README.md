@@ -4,16 +4,13 @@
 Predict the number of sunspots based on historical data.
 
 ### Data Preparation: 
-Creating the input-output pair by defining the window size.
-Shuffle the window size data. This can help the model to be more general. 
+1. Creating the input-output pair by defining the window size.
+2. Shuffle the window size data. This can help the model to be more general. 
 
 ### ML model: Neural model because we want to capture the non-linear and long-term dependency relationship inside the dataset. LSTM, RNN, CNN, DNN. 
-
 CNN + LSTM + DNN shows best result: 
 
-1. CNN: Extract the local feature and trend within the window. 
-
-(It also helps to smooth out the noise to help LSTM less affected by the local extreme value and focus on long term trend) 
+1. CNN: Extract the local feature and trend within the window. (It also helps to smooth out the noise to help LSTM less affected by the local extreme value and focus on long term trend) 
 
 2. LSTM: Capture the long term dependency.
 
