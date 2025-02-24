@@ -22,6 +22,7 @@ Huber Loss. It is better ability to handle outlier because it uses absolute erro
 
 ### Offline metrics: Number of Sun Spot is a regression problem.
 MAE: calculate average absolute difference
+
 MSE: penalize more to the large error.
 
 ### Optimizer: SGD + momentum 
