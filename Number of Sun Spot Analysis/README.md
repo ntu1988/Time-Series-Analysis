@@ -10,8 +10,10 @@ Predict the number of sunspots based on historical data.
 ### ML model: Neural model because we want to capture the non-linear and long-term dependency relationship inside the dataset. LSTM, RNN, CNN, DNN. 
 CNN + LSTM + DNN shows best result: 
 
-CNN: Extract the local feature and trend within the window. (It also helps to smooth out the noise to help LSTM less affected by the local extreme value and focus on long term trend) 
+CNN: Extract the local feature and trend within the window. (It also helps to smooth out the noise to help LSTM less affected by the local extreme value and focus on long term trend).
+
 LSTM: Capture the long term dependency.
+
 DNN:  Non-linear transformation and information compression.
 
 ### Loss function: 
