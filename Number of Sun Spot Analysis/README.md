@@ -8,7 +8,7 @@ Creating the input-output pair by defining the window size.
 
 Shuffle the window size data. This can help the model to be more general. 
 
-### ML model: Neural model because we want to capture the non-linear and long-term dependency relationship inside the dataset. LSTM, RNN, CNN, DNN:
+### ML model: Neural model (capture the non-linear and long-term dependency relationship inside the dataset):
 CNN + LSTM + DNN shows best result:
 
 CNN: Extract the local feature and trend within the window. (It also helps to smooth out the noise to help LSTM less affected by the local extreme value and focus on long term trend).
