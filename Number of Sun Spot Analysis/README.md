@@ -1,30 +1,35 @@
-## Business Goal: Predict the number of sunspots based on historical data.
+# Number of Sun Spot Analysis
 
-1. Data Preparation: 
-	1.1 Creating the input-output pair by defining the window size.
-	1.2. Shuffle the window size data. This can help the model to be more general. 
+### Business Goal: Predict the number of sunspots based on historical data.
 
-2.  ML model: Neural model because we want to capture the non-linear and long-term dependency relationship inside the dataset. LSTM, RNN, CNN, DNN. 
+### Data Preparation: 
 
-2.1 CNN + LSTM + DNN shows best result: 
+1.Creating the input-output pair by defining the window size.
+2.Shuffle the window size data. This can help the model to be more general. 
 
-CNN: Extract the local feature and trend within the window. 
+### ML model: Neural model because we want to capture the non-linear and long-term dependency relationship inside the dataset. LSTM, RNN, CNN, DNN. 
+
+CNN + LSTM + DNN shows best result: 
+
+1. CNN: Extract the local feature and trend within the window. 
 
 (It also helps to smooth out the noise to help LSTM less affected by the local extreme value and focus on long term trend) 
 
-LSTM: Capture the long term dependency.
+2. LSTM: Capture the long term dependency.
 
-DNN:  Non-linear transformation and information compression.
+3. DNN:  Non-linear transformation and information compression.
 
-3. Loss function: Huber Loss. It is better ability to handle outlier because it uses absolute error for large error and squared error for small error.
+### Loss function: 
 
-4. Offline metrics: Number of Sun Spot is a regression problem.
+Huber Loss. It is better ability to handle outlier because it uses absolute error for large error and squared error for small error.
 
-MAE: calculate average absolute difference
+### Offline metrics: Number of Sun Spot is a regression problem.
 
-MSE: penalize more to the large error.
+1. MAE: calculate average absolute difference
 
-5. Optimizer: SGD + momentum 
+2. MSE: penalize more to the large error.
+
+### Optimizer: SGD + momentum 
 
 SGD + momentum has advantage more general but more sensitive to initial learning rate choice. 
 
