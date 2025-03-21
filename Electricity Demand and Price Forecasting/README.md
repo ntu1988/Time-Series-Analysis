@@ -30,7 +30,7 @@ Cyclical encoding: Convert hour and weekday into sine/cosine features.
 
 #### Model Development: 
 
-1. XGBoost: 
+##### 1. XGBoost: 
 
 i. Capture non-linear relationships: Electricity demand and pricing often depends on complex, non-linear interactions such as weekend, weekday, temperature.
 
@@ -44,8 +44,7 @@ XGBoost is not designed for time series of forecasting, but we adapt it by conve
 
 Loss Function: MAE
 
-
-2. LSTM+Attention
+##### 2. LSTM+Attention
 
 Reason:
 
@@ -63,7 +62,7 @@ Masking:
 
 This layer is used to ignore the padding in the input data—specifically, the positions where the values are all zeros. Its purpose is to ensure that the model only focuses on the valid data and avoids interference from the meaningless zero values in subsequent computations.
 
-LSTM:
+##### LSTM:
 
 LSTM is used to capture long-term dependencies. It returns hidden states at every time step, so the output shape is (batch_size, 24, 132).
 
@@ -109,7 +108,7 @@ A dense layer typically applies a non-linear activation function such as Softmax
 
 3. Dimensionality Transformation: Change the dimensionality of the data. For example, it can reduce a high-dimensional feature vector to a low-dimensional space.
 
-3.LSTM+Attention+XGBoost
+##### 3.LSTM+Attention+XGBoost
 
 The idea is that LSTM-Attention model captures the sequential patterns, but there might be additional information (e.g. non-sequential feature interaction) that does not capture perfectly. These missed aspects show up as residuals.
 
