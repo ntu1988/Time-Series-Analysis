@@ -1,10 +1,10 @@
-Electric Demand and Power Price Forecasting 
+### Electric Demand and Power Price Forecasting 
 
-Business Goal: 
+#### Business Goal: 
 
 By combining the weather and energy consumption data to derive accurate predictions for electricity demand and pricing in a time-dependent context.
 
-Data Preparation: 
+#### Data Preparation: 
 
 Input:
 
@@ -16,7 +16,7 @@ Preprocess:
 
 1. Drop features with high correlations to avoid  multicollinearity causing the coefficient varies significantly. For example, weather description, weather main.
 
-Feature Engineering: 
+#### Feature Engineering: 
 
 Add hour, weekday, weekend, month, year to the data. Concatenate weather and energy data frame together.
 
@@ -28,7 +28,7 @@ Rolling statistics: 7-day moving average of demand and prices.
 
 Cyclical encoding: Convert hour and weekday into sine/cosine features.
 
-Model Development: 
+#### Model Development: 
 
 1. XGBoost: 
 
@@ -123,6 +123,7 @@ For example, hour 3 (3am) is low demand, hour 18 (18pm) is high demand. Model ca
 
 2. Sequential data is like generation xxx energy, total load actual, total load forecast, price actual, temp_city. Those values change with time.
 
+#### Result
 
 The results between XGBoost, LSTM+Attention, LSTM+Attention+XGBoost are very similar. 
 
