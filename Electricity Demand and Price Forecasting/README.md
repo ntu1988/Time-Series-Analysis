@@ -50,15 +50,15 @@ Reason:
 
 LSTM networks excel at capturing long-term dependencies in sequential data, which is crucial for time series forecasting. Adding an attention mechanism further enhances this by allowing the model to focus on specific, critical time steps—such as peak hours or extreme weather events—that have a disproportionate impact on energy prices. For instance, when there's a sudden drop in temperature or a surge in consumption, the attention layer can assign greater weight to those moments, ensuring the model pays closer attention to the most influential factors.
 
-Architecture:
+###### Architecture:
 
 Input Layer —> Masking —> LSTM —> Attention (Dot Product) —> Dense Layer —> Context (Dot Product) —> Flatten —> Dense
 
-Input Layer: 
+###### Input Layer: 
 
 Input Layer defines input data shape (batch_size, hist_size, n_features). For example, hist_size = 24, every step has 16 features. Every data shape is (24, 16).
 
-Masking:
+###### Masking:
 
 This layer is used to ignore the padding in the input data—specifically, the positions where the values are all zeros. Its purpose is to ensure that the model only focuses on the valid data and avoids interference from the meaningless zero values in subsequent computations.
 
@@ -66,7 +66,7 @@ This layer is used to ignore the padding in the input data—specifically, the p
 
 LSTM is used to capture long-term dependencies. It returns hidden states at every time step, so the output shape is (batch_size, 24, 132).
 
-Attention:
+###### Attention:
 
 This operation computes the similarity between the hidden state of each time step and the hidden states of all other time steps.
 
@@ -84,19 +84,19 @@ The  dot product is higher when hidden state representations are similar.
 
 If the features during the 6pm to 9pm consistently contribute more to accurate predictions. The network learns to “focus” on those periods. The learned hidden states for these time periods become similar, resulting in larger attention score.
 
-Dense + Softmax:
+###### Dense + Softmax:
 
 The Dense layer and softmax activation together transform the raw attention scores into a normalized weight distribution for each time step. 
 
-Context:
+###### Context:
 
 Dot product attention matrix and LSTM output to generate a context vector consolidate information from the entire sequence and emphasizes the time step that the model considers to be more important.
 
-Flatten:
+###### Flatten:
 
 Convert multiple-dimensional tensor into a one-dimensional vector for each sample.
 
-Dense Layer:
+###### Dense Layer:
 
 1.Feature Integration:
 
