@@ -18,15 +18,15 @@ Preprocess:
 
 #### Feature Engineering: 
 
-Add hour, weekday, weekend, month, year to the data. Concatenate weather and energy data frame together.
+1. Add hour, weekday, weekend, month, year to the data. Concatenate weather and energy data frame together.
 
-Time-based features: Hour, day, month, weekday, weekend.
+2. Time-based features: Hour, day, month, weekday, weekend.
 
-Lagged demand & price features: Previous 24-hour, 7-day trends.
+3. Lagged demand & price features: Previous 24-hour, 7-day trends.
 
-Rolling statistics: 7-day moving average of demand and prices.
+4. Rolling statistics: 7-day moving average of demand and prices.
 
-Cyclical encoding: Convert hour and weekday into sine/cosine features.
+5. Cyclical encoding: Convert hour and weekday into sine/cosine features.
 
 #### Model Development: 
 
